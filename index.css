@@ -1,0 +1,100 @@
+body {
+    background: #111111;
+}
+
+.normText {
+    font-family: 'Press Start 2P', cursive;
+    color: red;
+    padding-top: 4rem;
+}
+
+#meteor-circle {
+    display: block;
+    margin-left: 45%;
+    margin-top: 22%;
+    width: .2rem;
+    height: .7rem;
+    background: #00FEFE;
+    border: 0.04rem solid gray;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: .3rem .3rem .8rem #00FEFE;
+    animation: spinMeteor .35s linear infinite;
+}
+
+#meteor-red {
+    margin-left: 45%;
+    margin-top: 22%;
+    width: .4rem;
+    height: .15rem;
+    background: orange;
+    border: 0.04rem solid gray;
+    border-radius: 10%;
+    position: absolute;
+    box-shadow: .1rem .1rem .5rem orangered;
+    animation: spinMeteorRed .35s linear infinite;
+}
+
+#meteor-green {
+    margin-left: 45%;
+    margin-top: 22%;
+    width: .8rem;
+    height: .2rem;
+    background: greenyellow;
+    border: 0.04rem solid gray;
+    border-radius:25%;
+    position: absolute;
+    box-shadow: .45rem .45rem 1rem greenyellow;
+    animation: spinMeteorGreen .3s linear infinite;
+}
+
+#meteor-white {
+    margin-left: 45%;
+    margin-top: 22%;
+    width: 0rem;
+    height: 0rem;
+    border-bottom: .5rem solid white;
+    border-left: .2rem solid transparent;
+    border-right: .2rem solid transparent;
+    position: absolute;
+    box-shadow: .05rem .1rem .5rem white;
+    animation: spinMeteorWhite .34s linear infinite;
+}
+
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 2s;
+    animation-name: animatebottom;
+    animation-duration: 3s;
+  }
+
+.popUpText {
+    display: none;
+    text-align: center;
+}
+
+@keyframes spinMeteor {
+    from { transform: rotate(0deg) translateX(6rem); }
+    to   { transform: rotate(360deg) translateX(6rem); }
+}
+
+@keyframes spinMeteorRed {
+    from { transform: rotate(0deg) translateX(3rem); }
+    to   { transform: rotate(-360deg) translateX(3rem); }
+}
+
+@keyframes spinMeteorGreen {
+    from { transform: rotate(0deg) translateX(8rem); }
+    to   { transform: rotate(-360deg) translateX(8rem); }
+}
+
+@keyframes spinMeteorWhite {
+    from { transform: rotate(0deg) translateX(1.5rem); }
+    to   { transform: rotate(360deg) translateX(1.5rem); }
+}
+
+@keyframes animatebottom { 
+    from{ bottom:-4rem; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
