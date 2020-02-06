@@ -2,15 +2,54 @@ body {
     background: #111111;
 }
 
+a {
+    color: rgb(25, 255, 56);
+}
+
+a:hover {
+    color: crimson;
+}
+
 .normText {
     font-family: 'Press Start 2P', cursive;
     color: red;
     padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
-#meteor-circle {
+.astroText {
+    font-family: 'Righteous', cursive;
+    color: coral;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.orbiText {
+    font-family: 'Orbitron', sans-serif;
+    color: coral;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.writeTextNoPad {
+    font-family: 'Righteous', cursive;
+    color: coral;
+}
+
+#pageShowAfterLoad {
+    padding-bottom: 15rem;
+}
+
+#topPageRule {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid coral;
+  }
+
+#meteor-medium {
     display: block;
-    margin-left: 45%;
+    margin-left: 49%;
     margin-top: 22%;
     width: .2rem;
     height: .7rem;
@@ -22,8 +61,8 @@ body {
     animation: spinMeteor .35s linear infinite;
 }
 
-#meteor-red {
-    margin-left: 45%;
+#meteor-midtext {
+    margin-left: 49%;
     margin-top: 22%;
     width: .4rem;
     height: .15rem;
@@ -35,8 +74,8 @@ body {
     animation: spinMeteorRed .35s linear infinite;
 }
 
-#meteor-green {
-    margin-left: 45%;
+#meteor-outermost {
+    margin-left: 49%;
     margin-top: 22%;
     width: .8rem;
     height: .2rem;
@@ -48,8 +87,8 @@ body {
     animation: spinMeteorGreen .3s linear infinite;
 }
 
-#meteor-white {
-    margin-left: 45%;
+#meteor-fast {
+    margin-left: 49%;
     margin-top: 22%;
     width: 0rem;
     height: 0rem;
