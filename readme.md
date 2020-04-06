@@ -1,3 +1,3 @@
-this is a missile launch warning;
+the galaxy at a glance —
 
-do not push the buttons
+changing the world, one terraformer at a time

@@ -47,6 +47,19 @@ a:hover {
     background-size: cover;
 }
 
+.svgic {
+    height: 1.7rem;
+    width: 1.5rem;
+    filter: invert(65%) sepia(68%) saturate(953%) hue-rotate(50deg) brightness(98%) contrast(93%);
+}
+
+.svgic:hover {
+    height: 1.7rem;
+    width: 1.5rem;
+    filter: invert(0%) sepia(83%) saturate(7432%) hue-rotate(3deg) brightness(109%) contrast(114%);
+    filter: invert(21%) sepia(81%) saturate(4949%) hue-rotate(338deg) brightness(86%) contrast(101%);
+
+}
 
 /* fonts */
 
