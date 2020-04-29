@@ -34,25 +34,25 @@ class PenguinProfile {
     let json_size = Object.keys(json_source);
     let array_s = json_size.length;
     
-    let random_string_fetch_int =  Math.floor((Math.random() * parseInt(`${array_s}`)));
-
+    let random_string_fetch_int =  Math.floor((Math.random() * parseInt(`${array_s}`) + 1));
+    
     let string_return = json_source[random_string_fetch_int];
     return string_return;
-
+    
   }
-
+  
   div_animator() {
     let chat_divs = document.getElementsByClassName("chatWithinWindow");
     for (let i = 0; i < chat_divs.length; i++) {
       chat_divs[i].classList.add("chatterbox-slider");
     }
   }
-
+  
   make_a_chat_post() {
     
     this.div_animator();
     let div_slice = document.createElement("div");
-
+    
     setTimeout(() => {
       div_slice.classList.add("chatterbox-meteor");
     }, 350);
@@ -89,13 +89,22 @@ class PenguinProfile {
 }
 
 const CadetChubbins = new PenguinProfile("Cadet Chubbin Nuggets", "VXJunkies", "medium_high", "./static/chatterbox/images/cadetpenguinman.jpg")
+const AlbeakEinstein = new PenguinProfile("⭐ Dr. Prof. Albeak Einstein, M.D. PhD. EtAl.", "VXJunkies", "medium", "./static/chatterbox/images/albeakeinstein.jpg")
 
+let penguin_map = {"1": CadetChubbins, "2": AlbeakEinstein};
+const penguin_chooser = () => {
+  let peng_len = Object.keys(penguin_map);
+  let array_p = peng_len.length;
+  let fetch_int =  Math.floor((Math.random() * parseInt(`${array_p}`) + 1));
+  let pick_penguin = penguin_map[fetch_int];
+  return pick_penguin;
+}
 
-
-
-//function to pick random penguin to add to chat
+setTimeout(() => {
+  console.log("synchronous xml go brr haha");
+}, 7000);
 
 setInterval(() => {
   delete_cbx();
-  CadetChubbins.make_a_chat_post();
-}, 5750);
+  penguin_chooser().make_a_chat_post();
+}, 6450);
