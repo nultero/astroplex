@@ -3,7 +3,7 @@
 const cbx = document.getElementById("chatterbox");
 
 const delete_cbx = () => {
-  let i = 2; //think child elements might start at 0, 2 seems to work for deletion down to 3 total
+  let i = 2; //element countdown to deletion is actually 2 because I call this function before I add a new post
   while (i < cbx.childElementCount) {
     let node_rem = cbx.lastChild;
     cbx.removeChild(node_rem);
@@ -41,36 +41,50 @@ class PenguinProfile {
 
   }
 
+  div_animator() {
+    let chat_divs = document.getElementsByClassName("chatWithinWindow");
+    for (let i = 0; i < chat_divs.length; i++) {
+      chat_divs[i].classList.add("chatterbox-slider");
+    }
+  }
+
   make_a_chat_post() {
     
+    this.div_animator();
     let div_slice = document.createElement("div");
-    div_slice.classList.add("chatWithinWindow");
-    
-    let chat_img = div_slice.appendChild(document.createElement("img"));
-    chat_img.src = this.image_file;
+
+    setTimeout(() => {
+      div_slice.classList.add("chatterbox-meteor");
+    }, 350);
     
     let p = document.createElement("p");
     p.classList.add("text-left");
     p.classList.add("astroTextNoPad");
     let node = document.createTextNode(":: " + this.fetch_a_json()); //insert json data here
     p.appendChild(node);
-    div_slice.appendChild(p);
-
-
+    
     const name_stamp = document.createElement("span");
     name_stamp.classList.add("text-left");
     name_stamp.classList.add("nameAvatar");
     let name_node = document.createTextNode(`> ${this.name}`);
     name_stamp.appendChild(name_node);
-    div_slice.appendChild(name_stamp);
     
     const time_stamp = document.createElement("span");
     time_stamp.classList.add("timeStamp");
-    let time_node = document.createTextNode(`${Math.floor(Math.random() * 10)}:${Math.floor(Math.random() * 10)}`);
+    let time_node = document.createTextNode(`${Math.floor(Math.random() * 2)}${Math.floor(Math.random() * 10)}:${Math.floor(Math.random() * 10)}${Math.floor(Math.random() * 6)}`);
     time_stamp.appendChild(time_node);
-    div_slice.appendChild(time_stamp);
-
+    
     cbx.prepend(div_slice);
+    
+    setTimeout(() => {
+      div_slice.classList.remove("chatterbox-meteor");
+      div_slice.classList.add("chatWithinWindow");
+      let chat_img = div_slice.appendChild(document.createElement("img"));
+      chat_img.src = this.image_file;
+      div_slice.appendChild(p);
+      div_slice.appendChild(name_stamp);
+      div_slice.appendChild(time_stamp);
+    }, 1200);
   }
 }
 
@@ -82,9 +96,6 @@ const CadetChubbins = new PenguinProfile("Cadet Chubbin Nuggets", "VXJunkies", "
 //function to pick random penguin to add to chat
 
 setInterval(() => {
-  
   delete_cbx();
   CadetChubbins.make_a_chat_post();
-  //delete_cbx();
-
-}, 5000);
+}, 5750);

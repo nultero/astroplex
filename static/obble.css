@@ -121,6 +121,7 @@ a:hover {
     padding: 1rem;
     padding-bottom: 3.5rem;
     margin-bottom: 1rem;
+    transition: height 0.5s;
 }
 
 .chatWithinWindowRed {
@@ -130,6 +131,7 @@ a:hover {
     padding: 1rem;
     padding-bottom: 3.5rem;
     margin-bottom: 1rem;
+    height: 0.5rem;
 }
 
 .chatWithinWindow img {
@@ -160,8 +162,27 @@ a:hover {
 }
 
 
-/* styles */
 
+.chatterbox-meteor {
+    margin-left: 48%;
+    margin-top: 4%;
+    margin-bottom: 6%;
+    width: .5rem;
+    height: .5rem;
+    /* background: orange; */
+    /* border: 0.04rem solid darkcyan; */
+    border: 0.17rem solid darkcyan;
+    border-radius: 50%;
+    /* position: absolute; */
+    box-shadow: .1rem .1rem .5rem darkcyan;
+    animation: spinMeteorWhite 0.25s linear infinite;
+}
+
+.chatterbox-slider {
+    animation: chatterbox-slide 0.45s linear;
+}
+
+/* styles */
 
 #pageShowAfterLoad {
     padding-bottom: 15rem;
@@ -227,9 +248,18 @@ a:hover {
     animation: spinMeteorWhite .34s linear infinite;
 }
 
+
+
 .popUpText {
     display: none;
     text-align: center;
+}
+
+
+
+@keyframes chatterbox-slide {
+    from { transform: translateY(0rem); }
+    to   { transform: translateY(2.75rem); }
 }
 
 @keyframes spinMeteor {
