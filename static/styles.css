@@ -1,0 +1,376 @@
+body {
+  background: #111111;
+}
+
+body::-webkit-scrollbar {
+  width: 0.1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0.4rem solid rgba(0, 0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ABA6A6;
+}
+
+div.scroll::-webkit-scrollbar {
+  width: 0.6rem;
+  /* border: 1rem solid coral; */
+  border-radius: 12%;
+}
+
+div.scroll::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0.05rem solid coral;
+  border-radius: 12%;
+}
+
+div.scroll::-webkit-scrollbar-thumb {
+  size: 1rem;
+  background-color: rgba(0, 130, 130, 0.3);
+  outline: 1rem solid coral;
+  /* border-radius: 45%; */
+}
+
+a {
+  color: #59db0e;
+}
+
+a:hover {
+  color: crimson;
+}
+
+.jumbotron {
+  background-color: black;
+  background-size: cover;
+}
+
+.svgic {
+  height: 1.7rem;
+  width: 1.5rem;
+  filter: invert(65%) sepia(68%) saturate(953%) hue-rotate(50deg) brightness(98%) contrast(93%);
+}
+
+.svgic:hover {
+  height: 1.7rem;
+  width: 1.5rem;
+  filter: invert(0%) sepia(83%) saturate(7432%) hue-rotate(3deg) brightness(109%) contrast(114%);
+  filter: invert(21%) sepia(81%) saturate(4949%) hue-rotate(338deg) brightness(86%) contrast(101%);
+}
+
+/* fonts */
+.normText {
+  font-family: "Press Start 2P", cursive;
+  color: red;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.astroText {
+  font-family: "Righteous", cursive;
+  color: #fa7a34;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.astroTextNoPad {
+  font-family: "Righteous", cursive;
+  color: #fa7a34;
+  font-size: 0.8rem;
+  padding-bottom: 2rem;
+}
+
+.astroTextNoPadHolo {
+  font-family: "Righteous", cursive;
+  color: #fa7a34;
+  font-size: 1rem;
+  padding-bottom: 0.8rem;
+}
+
+#astroTextNoPadNav {
+  font-family: "Righteous", cursive;
+  color: #fa7a34;
+  font-size: 2rem;
+}
+
+#astroTextNoPadNavHeader {
+  font-family: "Righteous", cursive;
+  color: #0fe1fc;
+  font-size: 2rem;
+}
+
+.orbiText {
+  font-family: "Orbitron", sans-serif;
+  color: #fa7a34;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.orbiTextNoPad {
+  font-family: "Orbitron", sans-serif;
+  color: #fa7a34;
+  font-size: 0.85rem;
+}
+
+.writeTextNoPad {
+  font-family: "Righteous", cursive;
+  color: #fa7a34;
+}
+
+.holoCard {
+  border: 0.2rem solid #0c9aec;
+  border-radius: 30%;
+  margin: 0.7rem;
+}
+
+.holoCardImg {
+  max-height: 12rem;
+  max-width: 12rem;
+  width: auto;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 0.4rem;
+  border-radius: 50%;
+  border: 0.12rem solid #0fe1fc;
+  padding: 0.1rem;
+}
+
+.chatWindow {
+  border: 0.3rem solid #FABD33;
+  background-color: #111111;
+  border-radius: 9%;
+  padding: 1.2rem;
+  margin: 0rem 0;
+  max-height: 100rem;
+}
+
+.chatWithinWindow {
+  border: 0.16rem solid darkcyan;
+  background-color: #111111;
+  border-radius: 16%;
+  padding: 1rem;
+  padding-bottom: 3.5rem;
+  margin-bottom: 1rem;
+  transition: height 0.5s;
+}
+
+.chatWithinWindowRed {
+  border: 0.16rem solid darkred;
+  background-color: #111111;
+  border-radius: 16%;
+  padding: 1rem;
+  padding-bottom: 3.5rem;
+  margin-bottom: 1rem;
+  height: 0.5rem;
+}
+
+.chatWithinWindow img {
+  float: left;
+  max-width: 6rem;
+  width: auto;
+  margin-right: 2rem;
+  border-radius: 50%;
+  border: 0.12rem solid greenyellow;
+  padding: 0.1rem;
+}
+
+.nameAvatar {
+  color: #3186A4;
+  float: left;
+  margin-bottom: 0.2rem;
+  font-family: "Righteous", cursive;
+}
+
+.timeStamp {
+  color: greenyellow;
+  float: right;
+  font-size: 0.66rem;
+}
+
+.noteStamp {
+  float: right;
+}
+
+.chatterbox-meteor {
+  margin-left: 48%;
+  margin-top: 4%;
+  margin-bottom: 6%;
+  width: 0.5rem;
+  height: 0.5rem;
+  /* background: orange; */
+  /* border: 0.04rem solid darkcyan; */
+  border: 0.17rem solid darkcyan;
+  border-radius: 50%;
+  /* position: absolute; */
+  box-shadow: 0.1rem 0.1rem 0.5rem darkcyan;
+  animation: spinMeteorWhite 0.25s linear infinite;
+}
+
+.chatterbox-slider {
+  animation: chatterbox-slide 0.45s linear;
+}
+
+.holoplex-page {
+  border: 1rem solid #3186A4;
+}
+
+/* styles */
+#holoCardTitle {
+  font-family: "Press Start 2P", cursive;
+  color: greenyellow;
+  font-size: 0.9rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.1rem;
+}
+
+#holoCardGit {
+  max-height: 2rem;
+  max-width: 5rem;
+}
+
+#astroTextNoPadHoloCard {
+  font-family: "Righteous", cursive;
+  color: #fa7a34;
+  font-size: 1rem;
+  padding-bottom: 0.8rem;
+}
+
+#pageShowAfterLoad {
+  padding-bottom: 15rem;
+}
+
+#topPageRule {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid #fa7a34;
+}
+
+#topPageRuleGreen {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid greenyellow;
+}
+
+#topPageRuleGray {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  max-width: 50%;
+  border: 0;
+  border-top: 1px solid gray;
+}
+
+#meteor-medium {
+  display: block;
+  margin-left: 49%;
+  margin-top: 22%;
+  width: 0.2rem;
+  height: 0.7rem;
+  background: #00FEFE;
+  border: 0.04rem solid gray;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0.3rem 0.3rem 0.8rem #00FEFE;
+  animation: spinMeteor 0.35s linear infinite;
+}
+
+#meteor-midtext {
+  margin-left: 49%;
+  margin-top: 22%;
+  width: 0.4rem;
+  height: 0.15rem;
+  background: orange;
+  border: 0.04rem solid gray;
+  border-radius: 10%;
+  position: absolute;
+  box-shadow: 0.1rem 0.1rem 0.5rem orangered;
+  animation: spinMeteorRed 0.35s linear infinite;
+}
+
+#meteor-outermost {
+  margin-left: 49%;
+  margin-top: 22%;
+  width: 0.8rem;
+  height: 0.2rem;
+  background: greenyellow;
+  border: 0.04rem solid gray;
+  border-radius: 25%;
+  position: absolute;
+  box-shadow: 0.45rem 0.45rem 1rem greenyellow;
+  animation: spinMeteorGreen 0.3s linear infinite;
+}
+
+#meteor-fast {
+  margin-left: 49%;
+  margin-top: 22%;
+  width: 0rem;
+  height: 0rem;
+  border-bottom: 0.5rem solid white;
+  border-left: 0.2rem solid transparent;
+  border-right: 0.2rem solid transparent;
+  position: absolute;
+  box-shadow: 0.05rem 0.1rem 0.5rem white;
+  animation: spinMeteorWhite 0.34s linear infinite;
+}
+
+.popUpText {
+  display: none;
+  text-align: center;
+}
+
+@keyframes chatterbox-slide {
+  from {
+    transform: translateY(0rem);
+  }
+  to {
+    transform: translateY(2.75rem);
+  }
+}
+@keyframes spinMeteor {
+  from {
+    transform: rotate(0deg) translateX(6rem);
+  }
+  to {
+    transform: rotate(360deg) translateX(6rem);
+  }
+}
+@keyframes spinMeteorRed {
+  from {
+    transform: rotate(0deg) translateX(3rem);
+  }
+  to {
+    transform: rotate(-360deg) translateX(3rem);
+  }
+}
+@keyframes spinMeteorGreen {
+  from {
+    transform: rotate(0deg) translateX(8rem);
+  }
+  to {
+    transform: rotate(-360deg) translateX(8rem);
+  }
+}
+@keyframes spinMeteorWhite {
+  from {
+    transform: rotate(0deg) translateX(1.5rem);
+  }
+  to {
+    transform: rotate(360deg) translateX(1.5rem);
+  }
+}
+@keyframes animatebottom {
+  from {
+    bottom: -4rem;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

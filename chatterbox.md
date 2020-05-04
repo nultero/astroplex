@@ -1,9 +1,12 @@
-<!DOCTYPE html>
+---
+permalink: /projects/chatterbox
+---
+
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
-    <title>Λstroplex</title>
+    <title>holoplex</title>
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="60x60" href="/static/images/favicons/apple-touch-icon.png">
@@ -28,10 +31,7 @@
 
 
     <!-- my custom css -->
-    <link rel="stylesheet" type="text/css" href="static/styles.css">
-
-    
-
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
   </head>
 
   <body onload="loadFunction()">
@@ -42,87 +42,27 @@
     <div id="meteor-outermost"></div>
     <div id="meteor-fast"></div>
 
-    <!-- get element by id ... and then classList.add or classList.remove -->
-
 
 <!-- this is the content — div that responds to the pop -->
 
-<div class="popUpText" id="pageShowAfterLoad"> 
+<div class="container animatebottom popUpText" id="pageShowAfterLoad"> 
+        <h2 class="center-align astroText">
+        <nav class="navbar" aria-label="breadcrumb">
+          <ol class="navbar breadcrumb">
+           <li class="navbar breadcrumb-item"><a href=".." id="astroTextNoPadNavHeader">Λ</a></li>
+           <li class="navbar breadcrumb-item"><a href=".">holoplex</a></li>
+           <li class="navbar breadcrumb-item active" id="astroTextNoPadNav" aria-current="page">^ chatterbox</li>
+          </ol>
+          </nav>
+          </h2>
+      
+    
 
+      <hr id="topPageRule">
 
+      <h4 class="center-align astroText">This post has yet to be written. Check back later for more information.</h4>
 
-
-  <div class="jumbotron">
-
-    <h2 class="display-4 center-align astroText">astroplex</h2>
-
-    <p class="lead orbiTextNoPad">the galaxy at a glance</p>
-
-  </div>
-
-
-  <div class="container">
-
-      <p class="center-align orbiText">the Λstroplex School for the technologically challenged is in session</p>
-
-      <hr id="topPageRule" style="padding-bottom: 1.8rem;">
-
-      <p class="text-left writeTextNoPad" style="font-size: large"> >>> the chatterbox  <span class="text-right noteStamp" style="font-family: 'Orbitron', sans-serif; font-size: .7rem;"> <a href="/projects/chatterbox"> holoplex <img src="/static/images/notesicon.svg" class="svgic"> </a> </span></p>
-         
-         
-
-
-      <div class="chatWindow" id="chatterbox">
-
-        <div class="chatWithinWindow">
-         <img src="/static/chatterbox/images/penguinboi.jpg" alt="🐧">
-         <p class="text-left astroTextNoPad">: Why am I in a bubble what is this sorcery</p>
-         <span class="timeStamp">12:25</span>
-         <span class="text-left nameAvatar"> > Mr. Piggintuckles</span>
-         
-        </div>
-        
-        <div class="chatWithinWindow">
-          <img src="/static/chatterbox/images/albeakeinstein.jpg" alt="🐧">
-          <p class="text-left astroTextNoPad">: Technology bubbles, my dear Piggintuckles</p>
-          <span class="timeStamp">12:28</span>
-          <span class="text-left nameAvatar"> > ⭐ Dr. Prof. Albeak Einstein, M.D. PhD. EtAl.</span>
-        </div>
-        
-        <div class="chatWithinWindow">
-          <img src="/static/chatterbox/images/cadetpenguinman.jpg" alt="🐧">
-          <p class="text-left astroTextNoPad">: hwat is bub ,?</p>
-          <span class="text-left nameAvatar"> > Cadet Chubbin Nuggets</span>
-          <span class="text-right timeStamp">12:31</span>
-         </div>
-
-
-
-
-
-      </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      
 </div>
 
 
@@ -131,7 +71,7 @@
       var myLoadThingy;
       
       function loadFunction() {
-        myLoadThingy = setTimeout(showPage, 1600);
+        myLoadThingy = setTimeout(showPage, 1300);
       }
       
       function showPage() {
@@ -142,8 +82,5 @@
         document.getElementById("pageShowAfterLoad").style.display = "block";
       }
       </script>
-    <script src="/static/chatterbox/scripts/chatterbox.js" type="module" crossorigin="anonymous"></script>
-    
-    
   </body>
 </html>
