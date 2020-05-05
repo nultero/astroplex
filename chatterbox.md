@@ -1,5 +1,6 @@
 ---
 permalink: /projects/chatterbox
+layout: null
 ---
 
 <html>
@@ -48,7 +49,7 @@ permalink: /projects/chatterbox
 <div class="container animatebottom popUpText" id="pageShowAfterLoad"> 
         <h2 class="center-align astroText">
         <nav class="navbar" aria-label="breadcrumb">
-          <ol class="navbar breadcrumb">
+          <ol class="navbar breadcrumb bg-dark">
            <li class="navbar breadcrumb-item"><a href=".." id="astroTextNoPadNavHeader">Λ</a></li>
            <li class="navbar breadcrumb-item"><a href=".">holoplex</a></li>
            <li class="navbar breadcrumb-item active" id="astroTextNoPadNav" aria-current="page">^ chatterbox</li>

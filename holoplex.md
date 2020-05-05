@@ -1,5 +1,6 @@
 ---
 permalink: /projects/
+layout: null
 ---
 <html>
   <head>
@@ -45,8 +46,8 @@ permalink: /projects/
 
 <div class="container animatebottom popUpText" id="pageShowAfterLoad"> 
       <h2 class="center-align astroText">
-        <nav class="navbar" aria-label="breadcrumb">
-          <ol class="navbar breadcrumb">
+        <nav class="navbar">
+          <ol class="navbar breadcrumb bg-dark">
            <li class="navbar breadcrumb-item"><a href=".." id="astroTextNoPadNavHeader">Λ</a></li>
            <li class="navbar breadcrumb-item active" id="astroTextNoPadNav" aria-current="page">     ^ holoplex</li>
           </ol>
@@ -59,7 +60,7 @@ permalink: /projects/
       <div class="container">
         <div class="row">
 
-          <div class="col-sm holoCard astroTextNoPadHolo"> <a href="/projects/chatterbox">
+          <div class="col-sm holoCard astroTextNoPadHolo bg-dark"> <a href="/projects/chatterbox">
             <img class="holoCardImg" src="/static/chatterbox/images/jeffrey_cowpoke.jpg" alt="🐧">
             <p id="holoCardTitle">the chatterbox</p>
             <hr id="topPageRuleGreen">
