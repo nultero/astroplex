@@ -1,0 +1,50 @@
+
+@keyframes orbit {
+    from {
+      transform: rotate(0deg) translateX(1.1rem);
+    }
+    
+    to {
+      transform: rotate(359deg) translateX(1.1rem);
+    }
+  }
+
+.homebar {
+    font-variant-caps: small-caps;
+    font-family: 'Righteous';
+    font-size: 140%;
+    color: #55ffff;
+    /* color: #00bd8b; */
+    /* padding-left: 1rem;
+    padding-right: 1rem; */
+    z-index: 5;
+    position: static;
+  }
+  .homebarRed {
+    color: #7c003e;
+    /* text-decoration: underline;
+    text-decoration-color:  #00bd8b; */
+    z-index: 2;
+  }
+  
+  .homebarBorder {
+    border: transparent;
+    border-radius: 50%;
+    size: 2.12rem;
+    z-index: 2;
+  }
+  .homebarMeteorAnchor {
+    /* background-color: transparent; */
+    /* border: transparent; */
+    margin-left: 0.12rem;
+    margin-top: .8rem;
+    /* border-top: 1px orange; */
+    border-bottom: 0.3rem solid orange;
+    border-left: 0.12rem solid transparent;
+    border-right: 0.12rem solid transparent;
+    position: absolute;
+    border-radius: 43%;
+    size: 2.18rem;
+    z-index: 0;
+    animation: orbit 0.9s linear infinite;
+  }

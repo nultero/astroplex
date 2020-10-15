@@ -1,6 +1,7 @@
 import { Container } from '@material-ui/core';
 import React, { Component } from 'react';
 import Head from 'next/head';
+import Homelink from '../../components/homelink';
 import styles from '../../styles/devilscrypt.module.css';
 import cipher from '../../data/cipher.json';
 
@@ -12,8 +13,9 @@ class DevilScrypt extends Component {
     this.cipherRender = this.cipherRender.bind(this);
     this.cipher = cipher;
     this.fault = `${this.cipher[0]}`;
-    this.topString = `${this.cipher[0]}`;
-    this.state = { topString: this.topString, string: this.fault };
+    this.topString = `evilScrypt`;
+    this.state = { topString: this.topString, string: this.fault,
+                    };
 }
 
   updatesChange(evt) {
@@ -22,10 +24,31 @@ class DevilScrypt extends Component {
     });
   }
 
-  componentDidMount() {  
-   this.setState({
-    topString: `${this.cipher[0]}`,
-   })
+  topbar(ebb, ebbstate) {
+    const topS = `evilScrypt`;
+    let newState = ``;
+    for (let i = 0; i < topS.length; i++) {
+      if (i !== ebbstate) {
+        newState = newState + topS[i];
+      }
+      else if (i === ebbstate) {
+        newState = newState + cipher[ebb];
+      }
+    }
+
+    this.setState({
+     topString: `${newState}`,
+    })
+  }
+
+  componentDidMount() { 
+    let nextinterval = Math.floor(Math.random() * 9000);
+    setInterval(() => {
+      let ebb = Math.floor(Math.random() * 63);
+      let ebbstate = Math.floor(Math.random() * 9);
+      nextinterval = Math.floor(Math.random() * 9000);
+      this.topbar(ebb, ebbstate);
+    }, nextinterval);
   }
 
   cipherRender() {
@@ -51,11 +74,17 @@ class DevilScrypt extends Component {
         </Head>
 
         <main>
-        <h1 className={styles.titlebar} >
-          <span className={styles.titlebarBorder}>D</span><span className={styles.titlebarRed}>evilScrypt</span>
-        </h1>
+
+        <Homelink />
+
+        <div className={styles.titlediv}>
+          <h1 className={styles.titlebar} >
+            <span className={styles.titlebarBorder}>D</span><span className={styles.titlebarRed}>{this.state.topString}</span>
+          </h1>
+        </div>
           <textarea className={styles.devilbox} onChange={this.updatesChange} value={this.cipherRender()}  ></textarea>
-          {/* <p className={styles.fontism}>{this.cipherRender()}</p> */}
+          <p className={styles.fontismQuick}>{`Yello`}</p>
+
         </main>
         </div>
     </Container>

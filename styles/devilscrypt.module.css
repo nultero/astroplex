@@ -4,13 +4,21 @@
     align-items: center;
 }
 
+
 .titlebar {
     font-variant-caps: small-caps;
-    font-family: 'Righteous';
-    font-size: 340%;
+    font-family: 'Orbitron';
+    font-size: 240%;
+    width: max-content;
+    padding: 0.25rem;
+    /* font-family: 'Righteous'; */
     color: #c20404;
-    text-decoration: underline;
-    text-decoration-color: #e60000;
+    border: 1px solid #e60000;
+    border-right: transparent;
+    border-top: transparent;
+    border-radius: 8px;
+    /* text-decoration: underline;
+    text-decoration-color: #e60000; */
 }
 
 .titlebarRed {
@@ -18,7 +26,7 @@
 }
 
 .titlebarBorder {
-    border: 1px solid lightslategray;
+    border: 0px solid lightslategray;
 }
 
 
@@ -27,6 +35,8 @@
 
 
 .devilbox {
+    /* font-family: 'Quicksand'; */
+    
     background-color: black;
     color: #00bd8b;
     font-size: 120%;
@@ -36,7 +46,17 @@
     resize: vertical;
 }
 
-.fontism {
+.fontismOrb {
+    font-family: 'Orbitron';
+    color: #7c003e;
+    max-width: 30%;
+}
+.fontismQuick {
+    font-family: 'Quicksand';
+    color: #7c003e;
+    max-width: 30%;
+}
+.fontismRight {
     font-family: 'Righteous';
     color: #7c003e;
     max-width: 30%;
