@@ -19,31 +19,13 @@ body {
   background-color: black;
 }
 
+a {
+  color: #00bd8b;
+}
+
 .tinycaps {
   font-variant-caps: small-caps;
   font-family: 'Righteous';
   font-size: 12rem;
   color: aqua;
-}
-.titlebar {
-  font-variant-caps: small-caps;
-  font-family: 'Righteous';
-  font-size: 510%;
-  color: #55ffff;
-  /* color: #00bd8b; */
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.titlebar2 {
-  color: #7c003e;
-}
-
-.graph {
-  font-family: 'Righteous';
-  color: #7c003e;
-  font-size: large;
-}
-.graph2 {
-  font-family: 'Righteous';
-  color: #00bd8b;
 }

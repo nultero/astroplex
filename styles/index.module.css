@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(2.1rem);
+  }
+  
+  to {
+    transform: rotate(359deg) translateX(2.1rem);
+  }
+}
+
+
+.titlebar {
+  font-variant-caps: small-caps;
+  font-family: 'Righteous';
+  font-size: 340%;
+  color: #55ffff;
+  /* color: #00bd8b; */
+  /* padding-left: 1rem;
+  padding-right: 1rem; */
+  z-index: 5;
+  position: static;
+}
+.titlebarRed {
+  color: #7c003e;
+  text-decoration: underline;
+  text-decoration-color:  #55ffff;
+  z-index: 2;
+}
+
+.titlebarBorder {
+  border: transparent;
+  border-radius: 50%;
+  size: 2.12rem;
+  z-index: 2;
+}
+.titlebarMeteorAnchor {
+  /* background-color: transparent; */
+  /* border: transparent; */
+  margin-left: 0.7rem;
+  margin-top: 2rem;
+  /* border-top: 1px orange; */
+  border-bottom: 0.5rem solid orange;
+  border-left: 0.2rem solid transparent;
+  border-right: 0.2rem solid transparent;
+  position: absolute;
+  border-radius: 43%;
+  size: 2.18rem;
+  z-index: 0;
+  animation: orbit 0.9s linear infinite;
+}
+
+
+
+
+.graph {
+  font-family: 'Righteous';
+  color: #7c003e;
+  font-size: large;
+}
+.graphGr {
+  font-family: 'Righteous';
+  color: #00bd8b;
+}
+.graphLink {
+  font-family: 'Righteous';
+  align-content: center;
+  padding: 0.65rem;
+  /* border: 0.02rem solid orange; */
+  border-radius: 8px;
+}

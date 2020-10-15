@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titlebar {
+    font-variant-caps: small-caps;
+    font-family: 'Righteous';
+    font-size: 340%;
+    color: #79e400;
+}
+.titlebarRed {
+    color: #7c003e;
+    text-decoration: underline;
+    text-decoration-color: #79e400;
+}
+  
+.graph {
+  font-family: 'Righteous';
+  color: #7c003e;
+  font-size: large;
+}
+.graphGr {
+  font-family: 'Righteous';
+  color: #00bd8b;
+}
+.graphLink {
+  font-family: 'Righteous';
+  align-content: center;
+  padding: 0.65rem;
+  /* border: 0.02rem solid orange; */
+  border-radius: 8px;
+}

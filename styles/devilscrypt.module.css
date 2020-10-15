@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titlebar {
+    font-variant-caps: small-caps;
+    font-family: 'Righteous';
+    font-size: 340%;
+    color: #c20404;
+    text-decoration: underline;
+    text-decoration-color: #e60000;
+}
+
+.titlebarRed {
+    color: #7c003e;
+}
+
+.titlebarBorder {
+    border: 1px solid lightslategray;
+}
+
+
+
+
+
+
+.devilbox {
+    background-color: black;
+    color: #00bd8b;
+    font-size: 120%;
+    min-width: 100%;
+    min-height: 8rem;
+    overflow: hidden;
+    resize: vertical;
+}
+
+.fontism {
+    font-family: 'Righteous';
+    color: #7c003e;
+    max-width: 30%;
+}
