@@ -48,3 +48,7 @@
     z-index: 0;
     animation: orbit 0.9s linear infinite;
   }
+
+  #homelinker {
+    color: #55ffff;
+  }

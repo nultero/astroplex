@@ -24,6 +24,11 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  color: #00bd8b;
+  text-decoration: none;
+}
+
 .tinycaps {
   font-variant-caps: small-caps;
   font-family: 'Righteous';

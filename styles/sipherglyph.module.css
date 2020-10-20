@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titlebar {
+  font-variant-caps: small-caps;
+  font-family: "Orbitron";
+  font-size: 300%;
+  width: max-content;
+  padding: 0.25rem;
+  padding-bottom: 0.01rem;
+  color: #ff7b00;
+  border: 1px solid #ff7b00;
+  border-right: transparent;
+  border-top: transparent;
+  border-radius: 8px;
+}
+
+.titlebarRed {
+  color: #9b4600;
+  font-size: 85%;
+}
+
+.titlebarBorder {
+  border: 0px solid lightslategray;
+}
+
+.glyphbox {
+  background-color: black;
+  color: #00bd8b;
+  font-size: 120%;
+  min-width: 100%;
+  min-height: 8rem;
+  overflow: scroll;
+  resize: vertical;
+}
+
+.outputArrow {
+  color: #7c003e;
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.copyButton {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-family: "Righteous";
+  background-color: #1f0010;
+  color: #ff7b00;
+}
+
+.fontismOrb {
+  font-family: "Orbitron";
+  color: #7c003e;
+  max-width: 30%;
+}
+
+.fontismQuick {
+  font-family: "Quicksand";
+  color: #7c003e;
+  text-align: center;
+}
+
+.fontismRight {
+  font-family: "Righteous";
+  color: #7c003e;
+  max-width: 30%;
+}
+
+/*# sourceMappingURL=sipherglyph.module.css.map */

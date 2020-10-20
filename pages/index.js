@@ -1,6 +1,7 @@
-import { Container } from '@material-ui/core'
-import Head from 'next/head'
-import styles from '../styles/index.module.css' // this is awesome modular css right here fam
+import { Container } from '@material-ui/core';
+import Head from 'next/head';
+import Link from 'next/link';
+import styles from '../styles/index.module.css'; // this is awesome modular css right here fam
 
 
 export default function Index() {
@@ -22,7 +23,7 @@ export default function Index() {
 
         <div className={styles.padding}>
         <p className={styles.graph}>construction is still underway //</p>
-        <h3 className={styles.graphLink}> <a href='/projects'>{">>"} Projects {">>"}</a></h3>
+        <h3 className={styles.graphLink}> <Link href='/projects'><a>{">>"} Projects {">>"}</a></Link></h3>
         </div>
 
 

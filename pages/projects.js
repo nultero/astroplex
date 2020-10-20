@@ -1,4 +1,4 @@
-import { Container } from '@material-ui/core';
+import { Container, Link } from '@material-ui/core';
 import Head from 'next/head';
 import styles from '../styles/projects.module.css';
 
@@ -24,7 +24,7 @@ export default function Index() {
         </h1>
 
         <div className={styles.padding}>
-        <h3 className={styles.graphLink}> <a href='/projects/devilscrypt'>{">>"} Devilscrypt {">>"}</a></h3>
+        <h3 className={styles.graphLink}> <Link href='/projects/sipherglyph'>{">>"} SipherGlyph {">>"}</Link></h3>
         </div>
         
         
