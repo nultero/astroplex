@@ -12,8 +12,7 @@
 }
 .titlebarRed {
     color: #7c003e;
-    text-decoration: underline;
-    text-decoration-color: #79e400;
+    border-bottom: 1px solid #79e400;
 }
   
 .graph {
@@ -29,6 +28,5 @@
   font-family: 'Righteous';
   align-content: center;
   padding: 0.65rem;
-  /* border: 0.02rem solid orange; */
   border-radius: 8px;
 }

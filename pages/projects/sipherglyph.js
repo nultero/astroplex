@@ -14,10 +14,12 @@ class SipherGlyph extends Component {
     this.checker = this.checker.bind(this);
     this.copyClip = this.copyClip.bind(this);
     this.crypt = this.crypt.bind(this);
-    // this.postcall = this.postcall.bind(this);
+    this.getkey = this.getkey.bind(this);
     this.randomize = this.randomize.bind(this);
     this.reset = this.reset.bind(this);
     this.cipher = cipher;
+    this.breakpoint = this.cipher[151];
+    this.cipherkey = this.cipher[151];
     this.uncipher = uncipher;
     this.isCiphered = false;
     this.isPlainText = false;
@@ -46,13 +48,19 @@ class SipherGlyph extends Component {
   checker(text) {
     for (let i = 0; i < text.length; i++) {
       if (this.chars.includes(text[i]) == true) {
-        this.isPlainText = true;
-        // console.log(`is plain text == ${this.isPlainText}`)
+        this.isPlainText = true;      
       }
       else if (this.chars.includes(text[i]) == false) {
-        this.isCiphered = true;
-        // console.log(`is ciph == ${this.isCiphered}`)
+        this.isCiphered = true;      
     }}}
+
+  getkey(obj, val) {
+    for(var key in obj){
+      if(obj.hasOwnProperty(key) && obj[key] == val){
+          return key;
+      }}
+  return false;
+  }
 
   crypt(event) {
     this.scrypt = event.target.value;
@@ -61,19 +69,30 @@ class SipherGlyph extends Component {
       this.checker(this.scrypt);
       this.sipherglyph = ``;
       
-      for (let i = 0; i < this.scrypt.length; i++) {        
-        if (this.isCiphered === false && this.isPlainText === true) { //only plaintext
+      
+      
+      //
+      //
+      // figure out these checks bruh, you have to call 'em anyway but like
+      //
+      if (this.isCiphered === false && this.isPlainText === true) { //only plaintext
+        for (let i = 0; i < this.scrypt.length; i++) {
           this.sipherglyph = this.sipherglyph + this.cipher[this.uncipher[this.scrypt[i]]] + this.cipher[151];
           // this.sipherglyph = this.sipherglyph + this.cipher[this.uncipher[this.scrypt[i]]] + this.uncipher[this.scrypt[i]] + this.cipher[151];
-        }
-        else if (this.isPlainText === false && this.isCiphered === true) { // only ciphertext
-          this.sipherglyph = ``;
-          console.log(`not ready yet`);
-        }
+        }}
+      else if (this.isPlainText === false && this.isCiphered === true) { // only ciphertext
+          // decode :  
+          // sipherglyph is output box
+          let decode = this.scrypt.split(this.cipher[151]);
+          for (let i in decode) {
+            if (decode[i] !== this.cipher[151] && this.getkey(this.cipher,decode[i]) !== false) {
+              this.sipherglyph = this.sipherglyph + this.getkey(this.uncipher,this.getkey(this.cipher,decode[i]));
+            }}}
         else { // both ciphertext and plaintext / some random chars are in the textbox; do nothing
           this.sipherglyph = this.textMonkey;
         }
-      }
+
+
       // post-processing function, method getting kinda bloated
       if (this.sipherglyph !== this.textMonkey && this.isCiphered === false) {
         let firstPrime = this.primes[this.randomize(this.max)];
@@ -97,12 +116,6 @@ class SipherGlyph extends Component {
     //
     //
     //
-
-
-    for (let i = 0; i < this.sipherglyph.length; i++) {        
-      console.log(`${this.uncipher[this.scrypt[i]]} - ${this.cipher[this.uncipher[this.scrypt[i]]]}`)
-    }
-
     // 
     // 
     // need precompiled reverse ciphers to debug 2 of my unicode chars not rendering
@@ -122,12 +135,12 @@ class SipherGlyph extends Component {
 
 
 
-
     this.setState({ 
       // scrypt: this.scrypt,    
       sipherglyph: this.sipherglyph,
     })
 }
+
 
 
 
@@ -155,17 +168,13 @@ class SipherGlyph extends Component {
       let ebbstate = this.randomize(10);
       nextinterval = this.randomize(9000);
       this.topbar(ebb, ebbstate);
-    }, nextinterval);
-  }
+    }, nextinterval);}
 
   copyClip() { // I know this part is old school but I couldn't figure out the clipboard api lol
     let copier = document.querySelector("#darkbox");
     copier.select();
     document.execCommand("copy");
   }
-
-
-
 
 
 
