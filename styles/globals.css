@@ -5,14 +5,17 @@
 @font-face {
   font-family: 'Righteous';
   src: url('../styles/fonts/Righteous-Regular.ttf');
+  font-display: swap;
 }
 @font-face {
   font-family: 'Quicksand';
   src: url('../styles/fonts/Quicksand-VariableFont_wght.ttf');
+  font-display: swap;
 }
 @font-face {
   font-family: 'Orbitron';
   src: url('../styles/fonts/Orbitron-VariableFont_wght.ttf');
+  font-display: swap;
 }
 
 body {
